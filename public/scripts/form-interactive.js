@@ -122,14 +122,16 @@ function initSubmit() {
 }
 
 function buildMessage(data) {
-  return (
-    "*Nuevo contacto - Energy Ingeniería*%0A%0A" +
-    "*Nombre:* " + data.get("name") + "%0A" +
-    "*Correo:* " + data.get("email") + "%0A" +
-    "*Teléfono:* " + data.get("phone") + "%0A" +
-    "*Servicio:* " + data.get("service") + "%0A" +
-    "*Mensaje:* " + data.get("message")
-  );
+  const lines = [
+    "*Nuevo contacto - Energy Ingeniería*",
+    "",
+    "*Nombre:* " + data.get("name"),
+    "*Correo:* " + data.get("email"),
+    "*Teléfono:* " + data.get("phone"),
+    "*Servicio:* " + data.get("service"),
+    "*Mensaje:* " + data.get("message"),
+  ];
+  return lines.join("\n");
 }
 
 /* -------- INIT -------- */
