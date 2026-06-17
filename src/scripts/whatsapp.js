@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "521234567890";
+const WHATSAPP_NUMBER = "50588027299";
 
 function getFormData(form) {
   const data = new FormData(form);
