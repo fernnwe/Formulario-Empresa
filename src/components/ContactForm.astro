@@ -61,14 +61,15 @@
     </div>
 
     <button type="submit" class="btn">
-      Enviar mensaje
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <span class="btn-text">Enviar mensaje</span>
+      <span class="btn-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+      <span class="spinner"></span>
     </button>
   </form>
 </section>
 
-<script>
-  import { sendToWhatsApp } from "../scripts/whatsapp.js";
-
-  document.getElementById("contactForm").addEventListener("submit", sendToWhatsApp);
-</script>
+<div class="toast-container" aria-live="polite">
+  <div class="toast success"></div>
+</div>
