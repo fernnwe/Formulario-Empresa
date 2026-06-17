@@ -164,7 +164,7 @@ body {
 }
 
 .header-logo img {
-  height: 44px;
+  height: 56px;
   width: auto;
   display: block;
   filter: brightness(var(--logo-brightness));
@@ -592,7 +592,7 @@ body {
   }
 
   .header-logo img {
-    height: 36px;
+    height: 46px;
   }
 
   .main {
