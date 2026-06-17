@@ -1,0 +1,46 @@
+---
+---
+
+<section class="form-section">
+  <h2>Contáctanos</h2>
+  <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.</p>
+  <form id="contactForm">
+    <div class="form-group">
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+    </div>
+    <div class="form-group">
+      <label for="phone">Número de teléfono</label>
+      <input type="tel" id="phone" name="phone" placeholder="00000000" required />
+    </div>
+    <div class="form-group">
+      <label for="service">Tipo de servicio</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Selecciona el servicio</option>
+        <option value="Instalación, mantenimiento y venta de A/A">Instalación, mantenimiento y venta de A/A</option>
+        <option value="Instalación Residencial">Instalación Residencial</option>
+        <option value="Instalación Industrial">Instalación Industrial</option>
+        <option value="Cuartos Frios">Cuartos Frios</option>
+        <option value="Chiller">Chiller</option>
+        <option value="Sistemas VRF">Sistemas VRF</option>
+        <option value="Compresores">Compresores</option>
+        <option value="Inspección de Equipos">Inspección de Equipos</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    </div>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</section>
+
+<script>
+  import { sendToWhatsApp } from "../scripts/whatsapp.js";
+
+  document.getElementById("contactForm").addEventListener("submit", sendToWhatsApp);
+</script>
